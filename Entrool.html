@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#071D49">
+    <title>GPC Student Enrolment</title>
+    <link rel="shortcut icon" href="./assets/gpc-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./Entrool.css">
+</head>
+
+<body>
+    <header class="nav"><a class="brand" href="index.html"><img src="./assets/gpc-logo.png" alt="GPC logo"
+                onerror="this.style.display='none'"><b>GPC GROUP OF<br><small>EDUCATION INSTITUTIONS</small></b></a>
+        <nav><a href="index.html">Home</a><a href="index.html#about">About Us</a><a
+                href="index.html#courses">Courses</a><a href="index.html#universities">Universities</a><a
+                href="index.html#contact">Contact</a></nav><a class="back" href="./index.html">Back to Home</a>
+    </header>
+    <main>
+        <section class="hero">
+            <div><span class="eyebrow">GPC GROUP OF EDUCATION INSTITUTIONS</span>
+                <h1>Start Your Educational Journey <em>With GPC</em></h1>
+                <p>Take the first step towards your future. Complete the student enrolment form and our team will
+                    contact you with further course information.</p>
+                <div class="points">✓ Personal guidance　 ✓ Course enquiries　 ✓ Student support</div>
+            </div>
+            <div class="seal" aria-hidden="true"><img src="./assets/gpc-logo.png" alt="" width="290px"></div>
+        </section>
+        <section class="wrap">
+            <div class="heading"><span class="eyebrow">YOUR NEXT STEP STARTS HERE</span>
+                <h2>Student Enrolment Form</h2>
+                <p>Fields marked * are required.</p>
+            </div>
+            <form id="enrolForm" novalidate>
+                <section class="part">
+                    <h3><i>01</i> Student Personal Information</h3>
+                    <div class="grid">
+                        <label>Student Full Name *<input name="studentName" required maxlength="120"
+                                placeholder="Enter full name" autocomplete="name"></label>
+                        <label>Date of Birth *<input name="dob" type="date" required></label>
+                        <label>Mother's Name *<input name="motherName" required maxlength="120"
+                                placeholder="Mother's full name"></label>
+                        <label>Father's Name *<input name="fatherName" required maxlength="120"
+                                placeholder="Father's full name"></label>
+                        <label>Primary Phone Number *<input name="phone" type="tel" inputmode="numeric"
+                                pattern="[6-9][0-9]{9}" maxlength="10" required
+                                placeholder="10-digit mobile number"></label>
+                        <label>Alternative Phone Number<input name="alternativePhone" type="tel" inputmode="numeric"
+                                pattern="[6-9][0-9]{9}" maxlength="10" placeholder="Optional"></label>
+                        <label class="wide">Full Residential Address *<textarea name="address" required maxlength="1000"
+                                rows="3" placeholder="Door no., street, town, district"></textarea></label>
+                        <label>PIN Code *<input name="pinCode" inputmode="numeric" pattern="[0-9]{6}" maxlength="6"
+                                required placeholder="6-digit PIN code"></label>
+                    </div>
+                    <p class="privacy">Aadhaar is not collected or stored by this form.</p>
+                </section>
+                <section class="part">
+                    <h3><i>02</i> Course Enquiry Details</h3>
+                    <div class="grid">
+                        <label>Education Category *<select id="category" name="category" required>
+                                <option value="">Select category</option>
+                                <option>School Education</option>
+                                <option>Undergraduate Programmes</option>
+                                <option>Postgraduate Programmes</option>
+                                <option>Professional &amp; Technical Courses</option>
+                                <option>Research Programmes</option>
+                                <option>Computer &amp; Skill Courses</option>
+                            </select></label>
+                        <label>Course Interested In *<select id="course" name="course" required disabled>
+                                <option value="">Select category first</option>
+                            </select></label>
+                        <label>Preferred University<select id="university" name="university">
+                                <option value="">Select university</option>
+                            </select></label>
+                        <label>Previous Educational Qualification *<input name="previousQualification" required
+                                maxlength="150" placeholder="e.g. 12th Standard"></label>
+                        <label>Year of Passing *<input name="yearOfPassing" type="number" min="1970" max="2100" required
+                                placeholder="e.g. 2024"></label>
+                        <label class="wide">Additional Enquiry / Message<textarea name="message" rows="3"
+                                maxlength="2000" placeholder="Optional message"></textarea></label>
+                    </div>
+                </section>
+                <label class="consent"><input type="checkbox" name="consent" required><span>I confirm that the
+                        information provided above is accurate and I agree to be contacted by GPC Group of Education
+                        Institutions regarding my course enquiry. *</span></label>
+                <input name="website" class="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="submitline">
+                    <p class="privacy">Your details will be used to respond to your course enquiry.</p><button
+                        id="submitBtn" type="submit">SUBMIT ENROLMENT FORM →</button>
+                </div>
+                <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+            </form>
+            <section id="success" class="success" hidden>
+                <div class="tick">✓</div><span class="eyebrow">APPLICATION RECEIVED</span>
+                <h2>Your Application Was Successfully Submitted!</h2>
+                <p>Thank you for choosing GPC. Our team will contact you shortly.</p>
+                <div class="details">
+                    <p>Student Name <b id="successStudent"></b></p>
+                    <p>Selected Course <b id="successCourse"></b></p>
+                    <p>Application Reference <b id="successReference"></b></p>
+                </div><a class="back" href="index.html">Back to Home</a>
+            </section>
+        </section>
+        <section class="help"><span class="eyebrow">WE ARE HERE TO HELP</span>
+            <h2>Need Assistance With Your Enrolment?</h2>
+            <p><a href="tel:9360223140">93602 23140</a> · <a href="tel:9360221987">93602 21987</a> · <a
+                    href="tel:9360195350">93601 95350</a> · <a href="tel:04173450487">04173 450487</a></p>
+            <p>No. 65, Muthoot Finance Upstairs, Market Road, Arni – 632301.</p>
+        </section>
+    </main>
+    <footer>© 2026 GPC Group of Education Institutions. All Rights Reserved.</footer>
+    <iframe id="gpcResponseFrame" name="gpcResponseFrame" title="Enrolment response" hidden></iframe>
+    <script src="./Entrool.js"></script>
+</body>
+
+</html>
