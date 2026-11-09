@@ -20,6 +20,39 @@ body {
     font-family: 'DM Sans', Arial, sans-serif
 }
 
+.container {
+    width: min(1180px, calc(100% - 44px));
+    margin: auto
+}
+
+.topbar {
+    background: var(--navy);
+    color: #eaf0ff;
+    font-size: 12px
+}
+
+.topbar-inner {
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.top-contact,
+.top-address {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.topbar i {
+    width: 14px;
+    height: 14px;
+    color: var(--gold2);
+    vertical-align: middle
+}
+
 .nav {
     position: sticky;
     top: 0;
@@ -408,6 +441,15 @@ footer {
 }
 
 @media(max-width:800px) {
+
+    .top-address {
+        display: none
+    }
+
+    .topbar-inner {
+        justify-content: center
+    }
+
     .nav {
         flex-wrap: wrap
     }

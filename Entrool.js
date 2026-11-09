@@ -1,5 +1,5 @@
 /* GPC Student Enrolment — set the deployed Apps Script /exec URL below. */
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby-ZGOUlra1HDnTkHu0GC_S8LqS-gDb6_YEhzDdaMeyJU9dIRtibaC2HnoRDIN4ltNA1w/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzu5ZgCqpu6UO5u-OEAf9J_xJ0iNmEY-sGDUr6KHoyioAFNEWYo-zhAzH-nVAPhjQaH/exec";
 
 const courseData = {
   "School Education":["8th Standard","10th Standard","11th Standard","12th Standard"],
